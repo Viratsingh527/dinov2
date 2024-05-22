@@ -11,4 +11,5 @@ image = Image.open(requests.get(url, stream=True).raw)
 
 # inference
 depth = pipe(image)["depth"]
-print(depth)
+print("Data type of image:", type(image))
+print("Data type of depth:", type(depth))
