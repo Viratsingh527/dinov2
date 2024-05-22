@@ -6,8 +6,8 @@ import requests
 pipe = pipeline(task="depth-estimation", model="LiheYoung/depth-anything-large-hf")
 
 # load image
-url = '/DATA2/mayur/pawscan/code/babu/datasets/CASIA-B/CASIA-B/GaitDatasetB-silh/001/bg-01/000'
-image = Image.open(requests.get(url, stream=True).raw)
+url = '/DATA2/mayur/pawscan/code/babu/datasets/CASIA-B/CASIA-B/GaitDatasetB-silh/001/bg-01/000/001-bg-01-000-001.png'
+image = Image.open(url)
 
 # inference
 depth = pipe(image)["depth"]
